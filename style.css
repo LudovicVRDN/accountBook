@@ -1,0 +1,21 @@
+header{
+    box-shadow: 1px 1px 8px rgb(8, 22, 35);
+}
+
+.rentre{
+    grid-area: a ;
+}
+.depense{
+    grid-area: c;
+}
+.charge{
+    grid-area: b;
+}
+
+main{
+    display: grid;
+    grid-template-areas: 
+    "a b"
+    "a b"
+    "c c";
+}

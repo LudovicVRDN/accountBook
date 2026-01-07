@@ -1,24 +1,87 @@
 header {
     box-shadow: 1px 1px 8px rgb(8, 22, 35);
 }
-
 section {
     margin-left: 1rem;
     margin-bottom: 1rem;
-    height: 30%;
-}
+    height: 40%;
 
+}
 .rentree {
     grid-area: a;
-
 }
-
 .depense {
     grid-area: c;
 }
-
 .charge {
     grid-area: b;
+}
+
+
+h2 {
+    margin-bottom: 0.5rem;
+}
+
+ul {
+    border: 1px rgba(90, 90, 90, 0) solid;
+    box-shadow: 1px 1px 5px rgb(84, 85, 85);
+    padding: 10px;
+    width: 95%;
+    height: 90%;
+    border-radius: 1rem;
+    overflow: auto;
+}
+li {
+    border: 1px rgba(90, 90, 90, 0) solid;
+    box-shadow: 1px 1px 5px rgb(84, 85, 85);
+    margin-top: 0.2rem;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    overflow: auto;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 5px 10px;
+
+}
+button {
+    border: 2px solid rgba(0, 0, 0, 0.414);
+    width: 4rem;
+    border-radius: 25px;
+    margin-bottom: 10px;
+}
+.changement {
+    display: flex;
+    gap: 10px;
+}
+.modifier {
+    border: 2px solid rgba(0, 0, 0, 0.414);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 25px;
+}
+.date {
+    display: none;
+}
+.popup{
+    border: 2px solid rgba(0, 0, 0, 0.166);
+    border-radius: 15px;
+    padding: 10px;
+    width: 46%;
+    background-color: rgb(246, 245, 245);
+    position: absolute;
+    display: none;
+}
+.open{
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+input{
+    border: 1px solid black;
+    width: 70%;
 }
 
 @media screen and (min-width: 768px) {
@@ -36,35 +99,12 @@ section {
 
         height: auto;
     }
-}
 
-h2 {
-    margin-bottom: 0.5rem;
-}
+    .liste_depense {
+        width: 97.5%;
+    }
 
-ul {
-    border: 1px rgba(90, 90, 90, 0) solid;
-    box-shadow: 1px 1px 5px rgb(84, 85, 85);
-    padding: 10px;
-    width: 95%;
-    height: 90%;
-    border-radius: 1rem;
-    overflow: auto;
-}
-
-.liste_depense {
-    width: 97.5%;
-}
-
-li {
-    border: 1px rgba(90, 90, 90, 0) solid;
-    box-shadow: 1px 1px 5px rgb(84, 85, 85);
-    margin-top: 0.2rem;
-    margin-bottom: 0.8rem;
-    padding: 10px;
-    width: auto;
-    height: auto;
-    border-radius: 1rem;
-    overflow: auto;
-
+   .date {
+    display: block;
+    }
 }

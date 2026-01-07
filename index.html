@@ -5,19 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cahier de compte</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/648c4c545e.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="flex flex-col w-screen h-screen p-2">
-    <header class="flex-1 bg-blue-900 text-center rounded-lg text-white mt-2">
+<body class="flex flex-col h-screen p-2">
+    <header class="flex-1 bg-indigo-950 text-center rounded-lg text-white mt-2 w-full">
         <h1 class='text-2xl font-serif mt-2'>Cahier de compte</h1>
     </header>
     <main class="flex-12  mt-2">
         <section class="charge">
             <h2>Charges fixes mensuelles</h2>
+            <button class="ajouter">Ajouter</button>
+            <form class="popup ">
+                <label>Motif de la dépense :<input type="text" , id="titre" , name="motif" ,
+                        required,maxlength="40"></label>
+                <label>Date: <input type="date" , id="datededebut" ,name="date" required></label>
+                <label>Montant: <input type="text" , id="categorie" , name="montant" required></label>
+                <div class="changement">
+                    <button class="valider" type="submit">Valider</button>
+                    <button onclick="removeclass()" class="buttonannuler">Annuler</button>
+                </div>
+            </form>
+
             <ul>
+                <li>
+                    <p>Loyer</p>
+                    <p class="date">05/06/2024</p>
+                    <p>360 Euros</p>
+                    <div class="changement">
+                        <button class="modifier"><i class="fa-solid fa-pen"></i></button>
+                        <button class="modifier"><i class="fa-solid fa-ban"></i></button>
+                    </div>
+                </li>
+
 
 
             </ul>
@@ -26,7 +49,29 @@
 
         <section class="rentree">
             <h2>Rentrées d'argent mensuelles</h2>
+            <button class="ajouter">Ajouter</button>
+            <form class="popup ">
+                <label>Motif de la dépense :<input type="text" , id="titre" , name="motif" ,
+                        required,maxlength="40"></label>
+                <label>Date: <input type="date" , id="datededebut" ,name="date" required></label>
+                <label>Montant: <input type="text" , id="categorie" , name="montant" required></label>
+                <div class="changement">
+                    <button class="valider" type="submit">Valider</button>
+                    <button onclick="removeclass()" class="buttonannuler">Annuler</button>
+                </div>
+            </form>
+
             <ul>
+                <li>
+                    <p>Loyer</p>
+                    <p class="date">05/06/2024</p>
+                    <p>360 Euros</p>
+                    <div class="changement">
+                        <button class="modifier"><i class="fa-solid fa-pen"></i></button>
+                        <button class="modifier"><i class="fa-solid fa-ban"></i></button>
+                    </div>
+                </li>
+
 
 
             </ul>
@@ -34,8 +79,29 @@
         </section>
 
         <section class="depense">
-            <h2>Dépenses</h2>
+            <h2 class="mt-4">Dépenses</h2>
+            <button class="ajouter">Ajouter</button>
+            <form class="popup ">
+                <label>Motif de la dépense :<input type="text" , id="titre" , name="motif" ,
+                        required,maxlength="40"></label>
+                <label>Date: <input type="date" , id="datededebut" ,name="date" ,required></label>
+                <label>Montant: <input type="text" , id="categorie" , name="montant" ,required></label>
+                <div class="changement">
+                    <button class="valider" type="submit">Valider</button>
+                    <button onclick="removeclass()" class="buttonannuler">Annuler</button>
+                </div>
+            </form>
+
             <ul class="liste_depense">
+                <li>
+                    <p>Loyer</p>
+                    <p class="date">05/06/2024</p>
+                    <p>360 Euros</p>
+                    <div class="changement">
+                        <button class="modifier"><i class="fa-solid fa-pen"></i></button>
+                        <button class="modifier"><i class="fa-solid fa-ban"></i></button>
+                    </div>
+                </li>
 
             </ul>
 

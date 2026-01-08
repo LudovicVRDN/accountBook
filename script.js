@@ -10,7 +10,7 @@
 
 const bttnAjouter = document.querySelectorAll(".ajouter");
 
-bttnAjouter.forEach((bouton,index) => {
+bttnAjouter.forEach((bouton, index) => {
     bouton.addEventListener('click', () => {
         popups[index].classList.toggle('open');
     });
@@ -23,27 +23,27 @@ const popups = document.querySelectorAll(".popup");
 popups.forEach(popup => {
     popup.addEventListener('submit', e => {
         e.preventDefault();
-
         const formValues = new FormData(popup);
-
         const nouvelleEntree = {
             titre: formValues.get('motif'),
-            date: formValues.get('date'),
+            date: formValues.get('date-de-debit'),
             montant: formValues.get('montant'),
         };
-
+        const contenuListe = document.createElement('li');
+        contenuListe.innerHTML = `<p>${formValues.get('motif')}</p>
+        <p class="date">${formValues.get('date-de-debit')}</p>  
+        <p>${formValues.get('montant')} Euros</p> 
+        <div class="changement">
+        <button class="modifier"><i class="fa-solid fa-pen"></i></button>
+        <button class="modifier"><i class="fa-solid fa-ban"></i></button> 
+        </div>`
+        const bttnValider = document.querySelectorAll('.valider')
+        const listeVide = document.querySelectorAll('ul');
+        console.log(listeVide);
+    
         console.log(nouvelleEntree);
     });
 });
 
 //Create addEventListener on BttnValider and add new <li> 
 
-const bttnValider = document.querySelectorAll('.valider')
-const contenuListe = document.createElement('li');
-contenuListe.innerHTML = `<p>Loyer</p>
- <p class="date">05/06/2024</p>  
- <p>360 Euros</p> 
- <div class="changement">
- <button class="modifier"><i class="fa-solid fa-pen"></i></button>
- <button class="modifier"><i class="fa-solid fa-ban"></i></button> 
- </div>`

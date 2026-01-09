@@ -74,6 +74,9 @@ button {
     position: absolute;
     display: none;
 }
+.hide{
+    display: none;
+}
 .open{
     gap: 20px;
     display: flex;

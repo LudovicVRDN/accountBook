@@ -10,11 +10,16 @@
 
 const bttnAjouter = document.querySelectorAll(".ajouter");
 
+
 bttnAjouter.forEach((bouton, index) => {
     bouton.addEventListener('click', () => {
         popups[index].classList.toggle('open');
     });
 });
+
+//Create listenner bouttonAnnuler
+
+
 
 //Get form values
 
@@ -37,8 +42,14 @@ popups.forEach(popup => {
         <button class="modifier"><i class="fa-solid fa-pen"></i></button>
         <button class="modifier"><i class="fa-solid fa-ban"></i></button> 
         </div>`
+        let listeVide = popup.nextElementSibling;
+        console.log(listeVide);
         const bttnValider = document.querySelectorAll('.valider')
-        const listeVide = document.querySelectorAll('ul');
+        bttnAjouter.forEach((bouton,index) =>{
+        bouton.addEventListener('click',() =>{
+            listeVide.appendChild(contenuListe)
+        })
+        })
         console.log(listeVide);
     
         console.log(nouvelleEntree);
